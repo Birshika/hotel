@@ -1,0 +1,198 @@
+
+.amenities-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom ,#e6efe9,  #fafbf9);
+  color: #1f4d3a;
+  text-align: center;
+}
+.amenities-inner {
+   max-width: 1100px;
+   margin: 0 auto; 
+  }
+
+
+.amenities-title { 
+  grid-column: 1 / -1; /* span both columns */
+  justify-self: center; /* center in the grid */
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin: 22px;
+  color: #1f4d3a;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+   }
+
+
+.amenities-subtitle {
+   color: #506f62c5;
+    margin-bottom: 28px;
+    font-size: 18px; 
+    font-family: lato, sans-serif;
+    font-weight: 500;
+  }
+
+
+.amenities-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 26px;
+   align-items: center; 
+  }
+
+
+.amenity { 
+  display:flex; 
+  flex-direction: column; 
+  align-items: center; gap:10px;
+   padding: 16px; 
+   background: rgba(31,77,58,0.03);
+    border-radius: 10px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;}
+
+.amenity:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+
+.amenity-icon svg { 
+  width:54px; height:54px; 
+  stroke:#1f4d3a;
+ }
+
+.amenity-label { 
+  font-size: 15px;
+   font-weight: 400; 
+   color:#1f4d3a;
+  font-family: lato, sans-serif;
+ }
+
+
+
+@media (max-width: 900px){ .amenities-grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width: 600px){ .amenities-grid{grid-template-columns:repeat(2,1fr);} .amenities-title{font-size:30px;} }
+@media (max-width: 420px){ .amenities-grid{grid-template-columns:1fr;} .amenity{flex-direction:row; align-items:center; gap:12px;} .amenity-label{text-align:left;} .amenities-inner{text-align:left;padding:0 12px;} }
+
+
+
+/* Rooms section styles (cards like reference) */
+.rooms-section { 
+  padding: 80px 20px;
+  background: linear-gradient(to bottom ,  #fafbf9,#c9a24d);
+  color: #1f4d3a; 
+}
+
+
+.rooms-inner { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display:flex; flex-direction:column; 
+  gap:30px; 
+}
+
+
+.room-card { 
+  display:flex; 
+  gap:30px; 
+  background: #fbf7f0ca; 
+  padding: 28px; 
+  border-radius: 24px; 
+  align-items:center; 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06); 
+}
+
+
+.room-card.room-reverse { 
+  flex-direction: row-reverse; 
+}
+
+
+.room-left { 
+  flex:1; 
+}
+
+
+.room-right { 
+  flex:1; 
+  text-align:right; 
+}
+
+
+.room-right img { 
+  width:100%; 
+  height:300px; 
+  object-fit:cover; 
+  border-radius:16px; 
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.room-title { 
+  font-family: lato, sans-serif; 
+  font-size:25px; 
+  margin:0 0 8px; 
+}
+
+.room-desc { 
+  color: #6b7b6a; 
+  margin-bottom:18px; 
+  font-size:16px; 
+  line-height:1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+.room-cta { 
+  display:flex; 
+  justify-content:center; 
+}
+.btn-reserve { 
+  background:#1f4d3a; 
+  color:#fff; 
+  padding:10px 18px; 
+  border-radius:8px; 
+  border:none; 
+  cursor:pointer; 
+  font-weight:700;
+  transition: transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms, background-color 180ms, opacity 120ms;
+  will-change: transform, box-shadow;
+  box-shadow: 0 2px 8px rgba(31,77,58,0.18);
+}
+
+/* Hover, focus and active states for better affordance */
+.btn-reserve:hover,
+.btn-reserve:focus-visible {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 26px rgba(31,77,58,0.26);
+  background-color: #174a36;
+  outline: none;
+}
+
+.btn-reserve:active {
+  transform: translateY(-1px) scale(0.997);
+  box-shadow: 0 6px 16px rgba(31,77,58,0.18);
+}
+
+.btn-reserve:focus-visible {
+  box-shadow: 0 10px 26px rgba(31,77,58,0.26), 0 0 0 4px rgba(31,77,58,0.08);
+  border-radius: 8px;
+}
+
+@media (max-width:900px) { 
+  .room-card{
+    flex-direction:column;
+  } 
+  .room-right{
+    text-align:center;
+  } 
+  .feature-box{
+    flex:1 1 30%;
+  } }
+@media (max-width:420px) { 
+  .feature-box{
+    flex:1 1 45%;
+  } 
+  .room-title{
+    font-size:22px;
+  } }

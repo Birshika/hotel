@@ -1,0 +1,41 @@
+.promo-banner {
+  background: linear-gradient(90deg, #2f684f, #e6efe9);
+  overflow: hidden;
+  padding: 25px 0;
+  color: rgb(255, 255, 255);
+}
+
+.promo-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 50px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: lato, sans-serif;
+}
+
+.promo-content strong {
+  color: #dfc896;
+  font-weight: 600;
+  font-family: lato, sans-serif;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.promo-banner:hover .promo-track {
+  animation-play-state: paused;
+}

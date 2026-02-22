@@ -1,0 +1,139 @@
+
+  .footer {
+    background: linear-gradient(to bottom, #174431d1 , #4d886fcd);
+    color: white;
+    padding: 60px 20px 30px;
+    font-family: 'Lato', sans-serif;
+  }
+
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+   h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: rgba(134, 189, 152, 0.9);
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(134, 189, 152, 0.9);
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .footer-section ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section ul li a:hover {
+    color: rgba(134, 189, 152, 0.9);
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+  }
+
+  .socials svg {
+    width: 30px;
+    height: 30px;
+    fill: rgba(255, 255, 255, 0.9);
+    transition: fill 0.3s ease;
+  }
+
+  .socials svg:hover {
+    fill: rgba(134, 189, 152, 0.9);
+  }
+
+   @media (max-width: 1024px) {
+    .footer-content {
+      gap: 30px;
+    }
+  }
+
+   @media (max-width: 900px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+   @media (max-width: 768px) {
+    .footer {
+      padding: 40px 20px 20px;
+      margin-top: 30px;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+    }
+
+    .footer-section p {
+      font-size: 13px;
+    }
+
+    .benefits-list {
+      column-count: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 20px 20px;
+      margin-top: 30px;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .footer-section h3 {
+      font-size: 16px;
+    }
+
+    .footer-section p {
+      font-size: 13px;
+    }
+
+    .benefits-list {
+      column-count: 1;
+    }
+  }
