@@ -138,7 +138,7 @@ html, body {
     text-align: center; 
     padding: 160px 0 60px 0; 
     background: radial-gradient(circle at center, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 75%),
-      url('images/hero.png') center/cover no-repeat;
+      url('hero.png') center/cover no-repeat;
     min-height: 700px; 
     position: relative;
     top: 72px;
@@ -173,4 +173,5 @@ img, .hero {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
+
 }
