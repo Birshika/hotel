@@ -500,7 +500,41 @@ More than just a place to stay, Hotel Oasis is your welcoming home in Kalimpong,
 </a>
 
 <script src="tilt.js"></script>
-  </body>
+<script>
+  // Hamburger Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('.nav');
+  const navClose = document.getElementById('nav-close');
+  const navLinks = document.querySelectorAll('.nav a');
 
+  // Open menu
+  hamburger.addEventListener('click', function() {
+    nav.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close menu
+  navClose.addEventListener('click', function() {
+    nav.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Close menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.nav') && !event.target.closest('.hamburger')) {
+      nav.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
+  </body>
 </html>
 
